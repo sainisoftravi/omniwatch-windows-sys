@@ -1,0 +1,8 @@
+# Runtime container volumes & database files
+data/
+logs/
+
+# Temporary files
+tmp/
+*.tmp
+*.log
