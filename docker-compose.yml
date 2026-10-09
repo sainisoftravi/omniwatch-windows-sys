@@ -14,7 +14,7 @@ services:
     networks:
       - appnet
     healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-pjhabsjajsdjashdj"]
+      test: [ "CMD", "mysqladmin", "ping", "-h", "localhost", "-u", "root", "-pjhabsjajsdjashdj" ]
       interval: 10s
       timeout: 5s
       retries: 10
@@ -101,13 +101,13 @@ services:
       - MTX_HLSVARIANT=mpegts
       - MTX_PATHDEFAULTS_RECORDPATH=/mnt/mediamtx-recordings/%path/%Y-%m-%d_%H-%M-%S-%f
     ports:
-      - "8554:8554"       # RTSP
-      - "8889:8889"       # WebRTC/HLS Player
-      - "1935:1935"       # RTMP
-      - "8888:8888"       # Web API / Web UI
-      - "8189:8189/udp"   # WebRTC UDP
-      - "8890:8890/udp"   # WebRTC Extra UDP
-      - "9997:9997"       # API
+      - "8554:8554" # RTSP
+      - "8889:8889" # WebRTC/HLS Player
+      - "1935:1935" # RTMP
+      - "8888:8888" # Web API / Web UI
+      - "8189:8189/udp" # WebRTC UDP
+      - "8890:8890/udp" # WebRTC Extra UDP
+      - "9997:9997" # API
     volumes:
       - ./logs:/logs
       - ./mediamtx.yml:/mediamtx.yml
@@ -261,8 +261,8 @@ services:
       - LICENSE_ENFORCEMENT=true
       - LICENSE_PRODUCT_CODE=omniwatch
       - LICENSE_PRODUCT_VERSION=1.0.0
-      - BOOTSTRAP_SUPERADMIN_EMAIL=sadmin@allcad.com
-      - BOOTSTRAP_SUPERADMIN_PASSWORD=Admin@123
+      - BOOTSTRAP_SUPERADMIN_EMAIL=Admin@digital-twin-solutions.com
+      - BOOTSTRAP_SUPERADMIN_PASSWORD=Admin@2026
       - 'BOOTSTRAP_SUPERADMIN_FULL_NAME="Super Admin"'
     ports:
       - "5003:5000"
@@ -291,4 +291,3 @@ services:
 networks:
   appnet:
     driver: bridge
-
